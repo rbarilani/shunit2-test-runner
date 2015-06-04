@@ -1,0 +1,20 @@
+{
+    "name": "hal9087/shunit2-test-runner",
+    "description": "A **Unix-like** shell command to run shunit2 tests scripts.",
+    "type": "bin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ruben Barilani",
+            "email": "ruben.barilani.dev@gmail.com"
+        }
+    ],
+    "require": {},
+    "bin": ["src/shunit"],
+    "scripts": {
+        "post-install-cmd": [
+            "cd vendor && { curl -L \"http://downloads.sourceforge.net/shunit2/shunit2-2.0.3.tgz\" | tar zx ; cd -; }"
+        ],
+        "test": "bash test.sh"
+    }
+}

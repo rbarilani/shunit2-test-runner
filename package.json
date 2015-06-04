@@ -1,0 +1,25 @@
+{
+  "name": "hal9087-shunit2-test-runner",
+  "version": "0.0.0",
+  "description": "A **Unix-like** shell command to run shunit2 tests scripts.",
+  "main": "bin/bump",
+  "bin": { "shunit" : "src/shunit" },
+  "scripts": {
+      "test" : "bash test.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hal9087/shunit2-test-runner.git"
+  },
+  "keywords": [
+    "Bash",
+    "Shell",
+    "shunit2"
+  ],
+  "author": "Ruben Barilani <ruben.barilani.dev@gmail.com> (https://github.com/hal9087)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hal9087/shunit2-test-runner/issues"
+  },
+  "homepage": "https://github.com/hal9087/shunit2-test-runner"
+}
