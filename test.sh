@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo "TODO";
+bash src/shunit --glob="src/shunit_test.sh"
