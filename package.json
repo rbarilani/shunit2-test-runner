@@ -1,6 +1,6 @@
 {
   "name": "hal9087-shunit2-test-runner",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A **Unix-like** shell command to run shunit2 tests scripts.",
   "main": "bin/bump",
   "bin": { "shunit" : "src/shunit" },

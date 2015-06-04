@@ -1,3 +1,8 @@
+# 0.2.0 (2015-06-04)
+
+- df60d12 adds --config option, adds .shunitrc configuration feature, adds tests [Ruben Barilani]
+
+
 # 0.1.2 (2015-06-04)
 
 - b4af83f fix permissions? [Ruben Barilani]
