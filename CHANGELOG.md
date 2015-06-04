@@ -1,3 +1,8 @@
+# 0.1.2 (2015-06-04)
+
+- b4af83f fix permissions? [Ruben Barilani]
+
+
 # 0.1.1 (2015-06-04)
 
 - ff4d7c3 adds --version option [Ruben Barilani]
