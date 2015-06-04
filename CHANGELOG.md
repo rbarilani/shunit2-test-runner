@@ -1,3 +1,8 @@
+# 0.2.1 (2015-06-04)
+
+- 8a1708e updates README.md [Ruben Barilani]
+
+
 # 0.2.0 (2015-06-04)
 
 - df60d12 adds --config option, adds .shunitrc configuration feature, adds tests [Ruben Barilani]
