@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/hal9087/shunit2-test-runner/issues"
   },
-  "homepage": "https://github.com/hal9087/shunit2-test-runner"
+  "homepage": "https://github.com/hal9087/shunit2-test-runner",
+  "devDependencies" : {
+      "hal9087-git-bump-sh": "git+https://github.com/hal9087/git-bump-sh.git"
+  }
 }
