@@ -52,14 +52,28 @@ This would install an executable script ```./node_modules/.bin/shunit```.
 ```
 Usage:
 
-shunit [--glob=<glob-pattern>] [-h|--help] [--version]
+shunit [--glob=<glob-pattern>] [--config=<config-file>] [-h|--help] [--version]
 
 Options:
 
-* --glob=<glob-pattern> : a <glob pattern> to match tests scripts to be run (default: 'src/*_test.sh')
-* -h or --help          : print this help message
-* --version             : print command version
+* --glob=<glob-pattern>  : a <glob pattern> to match tests scripts to be run (default: 'src/*_test.sh')
+* --config=<config-file> : provides options with a <config-file> (default: '.shunitrc')
+* -h or --help           : print this help message
+* --version              : print command version
+```
 
+## Configuration
+
+You can use a config file to provide options to the command.
+By default ```shunit``` command search for a ```.shunitrc``` file in the current folder, if found it source that file.
+ 
+Example:
+
+```bash
+#!/usr/bin/env bash
+# ./.shunitrc
+
+GLOB="my-test-folder/*Test.sh"
 ```
 
 ## Development

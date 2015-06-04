@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+GLOB="src/fixtures/failed_test.sh"

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+GLOB="src/*_test.sh" # not needed, it's here only as an example

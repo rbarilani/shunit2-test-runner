@@ -4,15 +4,17 @@ echo_help() {
     echo -e "
 Usage:
 
-shunit [--glob=<glob-pattern>] [-h|--help] [--version]
+shunit [--glob=<glob-pattern>] [--config=<config-file>] [-h|--help] [--version]
 
 Options:
 
-* --glob=<glob-pattern> : a <glob pattern> to match tests scripts to be run (default: 'src/*_test.sh')
-* -h or --help          : print this help message
-* --version             : print command version
+* --glob=<glob-pattern>  : a <glob pattern> to match tests scripts to be run (default: 'src/*_test.sh')
+* --config=<config-file> : provides options with a <config-file> (default: '.shunitrc')
+* -h or --help           : print this help message
+* --version              : print command version
 "
 }
+
 
 VERSION="0.1.2"
 
@@ -33,24 +35,56 @@ FAILED_TESTS_COUNTER=0
 PASSED_TESTS_COUNTER=0
 TOTAL_TESTS_COUNTER=0
 
+
 # DEFAULT OPTIONS
 GLOB="src/*_test.sh"
 
+# SOURCE CONFIGURATION FILE IF EXISTS
+CONFIGURATION_FILE=".shunitrc"
+
+#
 #
 # PARSE OPTIONS AND ARGUMENTS
 #
+#
+
+# PARSE CONFIG FILE OPTION FIRST
+for i in "$@"
+do
+case $i in
+    --config=*)
+    CONFIGURATION_FILE="${i#*=}"
+    if ! [ -f ${CONFIGURATION_FILE} ]; then
+        echo "'${CONFIGURATION_FILE}' No such file or directory"; exit 1;
+    fi;
+    break
+    ;;
+    *)
+
+    ;;
+esac
+done
+
+# SOURCE CONFIGURATION FILE IF EXISTS
+if [ -f ${CONFIGURATION_FILE} ]; then
+    source ${CONFIGURATION_FILE};
+fi;
+
 for i in "$@"
 do
 case $i in
     --glob=*)
     GLOB="${i#*=}"
-    shift # past argument=value
+    shift
     ;;
     -h|--help)
     echo_help; exit 0;
     ;;
     --version)
     echo "${VERSION}"; exit 0;
+    ;;
+    --config=*)
+    shift
     ;;
     *)
     if ! [[ ${i} =~ ^--* ]]; then
@@ -63,6 +97,12 @@ esac
 done
 
 
+
+#
+#
+# RUN
+#
+#
 
 for filename in ${GLOB}; do
 
