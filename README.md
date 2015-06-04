@@ -52,12 +52,13 @@ This would install an executable script ```./node_modules/.bin/shunit```.
 ```
 Usage:
 
-shunit --glob=<glob-pattern>
+shunit [--glob=<glob-pattern>] [-h|--help] [--version]
 
 Options:
 
 * --glob=<glob-pattern> : a <glob pattern> to match tests scripts to be run (default: 'src/*_test.sh')
 * -h or --help          : print this help message
+* --version             : print command version
 
 ```
 

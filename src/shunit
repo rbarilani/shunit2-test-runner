@@ -4,35 +4,36 @@ echo_help() {
     echo -e "
 Usage:
 
-shunit --glob=<glob-pattern>
+shunit [--glob=<glob-pattern>] [-h|--help] [--version]
 
 Options:
 
 * --glob=<glob-pattern> : a <glob pattern> to match tests scripts to be run (default: 'src/*_test.sh')
 * -h or --help          : print this help message
+* --version             : print command version
 "
 }
 
-FAILED_COUNTER=0
-PASSED_COUNTER=0
-TOTAL_COUNTER=0
+VERSION="0.1.0"
 
-FAILED_TESTS=0
-PASSED_TESTS=0
-TOTAL_TESTS=0
-
-FAILED_TESTS_COUNTER=0
-PASSED_TESTS_COUNTER=0
-TOTAL_TESTS_COUNTER=0
-
-# Reset
+# COLORS
 TEXT_RESET='\x1B[0m'
-
-# Bold Colors
 BOLD_GREEN='\x1B[1;32m'
 BOLD_RED='\x1B[1;31m'
 BOLD_WHITE='\x1B[1;37m'
 
+# COUNTERS
+FAILED_TESTS=0
+PASSED_TESTS=0
+TOTAL_TESTS=0
+FAILED_COUNTER=0
+PASSED_COUNTER=0
+TOTAL_COUNTER=0
+FAILED_TESTS_COUNTER=0
+PASSED_TESTS_COUNTER=0
+TOTAL_TESTS_COUNTER=0
+
+# DEFAULT OPTIONS
 GLOB="src/*_test.sh"
 
 #
@@ -47,6 +48,9 @@ case $i in
     ;;
     -h|--help)
     echo_help; exit 0;
+    ;;
+    --version)
+    echo "${VERSION}"; exit 0;
     ;;
     *)
     if ! [[ ${i} =~ ^--* ]]; then

@@ -1,1 +1,3 @@
 PRE_CMD="bash test.sh"
+PRE_COMMIT_CMD="cat src/shunit | sed 's/VERSION=\"[0-9]\{1,\}.[0-9]\{1,\}.[0-9]\{1,\}\"/VERSION=\"{{NEW_TAG}}\"/' > src/shunit.tmp && mv src/shunit.tmp src/shunit && git add src/shunit"
+
