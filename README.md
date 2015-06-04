@@ -1,4 +1,4 @@
-hal9087/git-bump-sh
+hal9087/shunit2-test-runner
 ==============================
 
 A **Unix-like** shell command to run shunit2 tests scripts.
