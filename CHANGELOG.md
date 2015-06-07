@@ -1,3 +1,8 @@
+# 1.0.0 (2015-06-07)
+
+- b01b40d renames github user [Ruben Barilani]
+
+
 # 0.2.1 (2015-06-04)
 
 - 8a1708e updates README.md [Ruben Barilani]

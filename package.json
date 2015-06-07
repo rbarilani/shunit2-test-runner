@@ -1,6 +1,6 @@
 {
   "name": "rbarilani-shunit2-test-runner",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "description": "A **Unix-like** shell command to run shunit2 tests scripts.",
   "main": "bin/bump",
   "bin": { "shunit" : "src/shunit" },
