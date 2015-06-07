@@ -1,16 +1,16 @@
-hal9087/shunit2-test-runner
+rbarilani/shunit2-test-runner
 ==============================
 
 A **Unix-like** shell command to run shunit2 tests scripts.
 
-[![Build Status](https://travis-ci.org/hal9087/shunit2-test-runner.svg)](https://travis-ci.org/hal9087/shunit2-test-runner)
+[![Build Status](https://travis-ci.org/rbarilani/shunit2-test-runner.svg)](https://travis-ci.org/rbarilani/shunit2-test-runner)
 
 ## Install
 
 ### Using git
 
 ```
-git clone https://github.com/hal9087/shunit2-test-runner.git
+git clone https://github.com/rbarilani/shunit2-test-runner.git
 ```
 
 This would install an executable script ```./shunit2-test-runner/src/shunit```.
@@ -18,15 +18,15 @@ This would install an executable script ```./shunit2-test-runner/src/shunit```.
 
 ### Using composer
 
-Adds this to your composer.json and run ```composer update hal9087/shunit2-test-runner```:
+Adds this to your composer.json and run ```composer update rbarilani/shunit2-test-runner```:
 
 ```json
 {
     "require": {
-        "hal9087/shunit2-test-runner" : "dev-master"
+        "rbarilani/shunit2-test-runner" : "dev-master"
     },
     "repositories" : [
-        { "type":"git", "url":"https://github.com/hal9087/shunit2-test-runner.git" }
+        { "type":"git", "url":"https://github.com/rbarilani/shunit2-test-runner.git" }
     ]
 }
 ```
@@ -40,7 +40,7 @@ Adds this to your package.json and run ```npm install```:
 ```json
 {
     "dependencies": {
-        "hal9087-shunit2-test-runner" : "git+https://github.com/hal9087/shunit2-test-runner.git"
+        "rbarilani-shunit2-test-runner" : "git+https://github.com/rbarilani/shunit2-test-runner.git"
     }
 }
 ```
